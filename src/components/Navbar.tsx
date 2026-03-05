@@ -36,8 +36,8 @@ export const Navbar = () => {
         <div className="gap-3 nav__item mr-2 lg:flex ml-auto lg:ml-0 lg:order-2">
             <ThemeChanger />
             <div className="hidden mr-3 lg:flex nav__item">
-              <Link href="/" className="px-6 py-2 text-white bg-indigo-600 rounded-md md:ml-5">
-                Get Started
+              <Link href="https://ceraphina-cactus.square.site/" className="px-6 py-2 text-white bg-indigo-600 rounded-md md:ml-5">
+                Shop
               </Link>
             </div>
         </div>
