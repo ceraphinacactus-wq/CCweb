@@ -8,3 +8,14 @@
     @apply dark:bg-trueGray-900;
   }
 }
+
+@theme {
+  /* remove default color declarations */
+  --color-*: initial;
+  /* your custom colors */
+  --color-white: #fff;
+  --color-purple: #481c89;
+  --color-green: #2E6021;
+  --color-tahiti: #3ab7bf;
+  --color-bermuda: #78dcca;
+}
