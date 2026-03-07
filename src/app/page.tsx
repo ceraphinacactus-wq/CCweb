@@ -3,36 +3,30 @@ import Link from "next/link";
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen bg-white text-ceraphina-text">
       {/* HERO */}
-      <section className="mx-auto max-w-6xl px-6 pt-14 pb-10 sm:pt-20">
+      <section className="mx-auto max-w-6xl px-6 pb-10 pt-14 sm:pt-20">
         <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
           <div>
-            <p className="inline-flex items-center rounded-full border px-3 py-1 text-sm">
+            <p className="inline-flex items-center rounded-full border border-ceraphina-border bg-ceraphina-accentGreenSoft px-3 py-1 text-sm text-ceraphina-cactus">
               Colorado Springs micro nursery • Markets • Local pickup
             </p>
 
-            <h1 className="mt-5 text-4xl font-semibold tracking-tight sm:text-5xl">
+            <h1 className="mt-5 text-4xl font-semibold tracking-tight text-ceraphina-cactus sm:text-5xl">
               Ceraphina Cactus
             </h1>
 
-            <p className="mt-4 text-lg text-neutral-600">
+            <p className="mt-4 text-lg text-ceraphina-muted">
               Healthy, happy columnar cacti and mineral-forward soil blends made
               for strong roots, fast growth, and easy care.
             </p>
 
             <div className="mt-7 flex flex-wrap gap-3">
-              <Link
-                href="/care"
-                className="rounded-xl bg-black px-5 py-3 text-sm font-medium text-white hover:opacity-90"
-              >
+              <Link href="/care" className="btn-primary">
                 View Care Guide
               </Link>
 
-              <Link
-                href="/products"
-                className="rounded-xl border px-5 py-3 text-sm font-medium hover:bg-neutral-50"
-              >
+              <Link href="/products" className="btn-secondary">
                 Browse Soil + Top Dress
               </Link>
 
@@ -40,7 +34,7 @@ export default function HomePage() {
                 href="https://www.facebook.com/"
                 target="_blank"
                 rel="noreferrer"
-                className="rounded-xl border px-5 py-3 text-sm font-medium hover:bg-neutral-50"
+                className="btn-secondary"
               >
                 Visit Facebook
               </a>
@@ -53,18 +47,17 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* “Image” card (no dependency on assets) */}
-          <div className="rounded-3xl border bg-gradient-to-b from-neutral-50 to-white p-6 shadow-sm">
-            <div className="rounded-2xl border bg-white p-6">
-              <p className="text-sm font-medium text-neutral-500">
+          <div className="rounded-3xl border border-ceraphina-border bg-gradient-to-b from-ceraphina-accentGreenSoft to-white p-6 shadow-sm">
+            <div className="rounded-2xl border border-ceraphina-border bg-white p-6">
+              <p className="text-sm font-medium text-ceraphina-muted">
                 Featured lineup
               </p>
 
-              <h2 className="mt-2 text-2xl font-semibold tracking-tight">
+              <h2 className="mt-2 text-2xl font-semibold tracking-tight text-ceraphina-cactus">
                 Active Cactus Soil Blends
               </h2>
 
-              <p className="mt-3 text-neutral-600">
+              <p className="mt-3 text-ceraphina-muted">
                 Two core mixes + three top dresses built for drainage, airflow,
                 and long-term root health.
               </p>
@@ -85,18 +78,17 @@ export default function HomePage() {
               </div>
 
               <div className="mt-6">
-                <Link
-                  href="/products"
-                  className="inline-flex rounded-xl bg-black px-5 py-3 text-sm font-medium text-white hover:opacity-90"
-                >
+                <Link href="/products" className="btn-primary">
                   See products + pricing
                 </Link>
               </div>
             </div>
 
-            <div className="mt-4 rounded-2xl border bg-white p-5">
-              <p className="text-sm font-medium">What we’re about</p>
-              <ul className="mt-3 space-y-2 text-sm text-neutral-600">
+            <div className="mt-4 rounded-2xl border border-ceraphina-border bg-white p-5">
+              <p className="text-sm font-medium text-ceraphina-cactus">
+                What we’re about
+              </p>
+              <ul className="mt-3 space-y-2 text-sm text-ceraphina-muted">
                 <li>• Healthy plants, clean pots, honest descriptions</li>
                 <li>• Mineral-forward mixes (drainage first)</li>
                 <li>• Friendly guidance for beginners + collectors</li>
@@ -107,9 +99,9 @@ export default function HomePage() {
       </section>
 
       {/* QUICK LINKS */}
-      <section className="border-t bg-neutral-50">
+      <section className="border-t border-ceraphina-border bg-ceraphina-surface">
         <div className="mx-auto max-w-6xl px-6 py-12">
-          <h2 className="text-xl font-semibold tracking-tight">
+          <h2 className="text-xl font-semibold tracking-tight text-ceraphina-cactus">
             Start here
           </h2>
 
@@ -138,28 +130,22 @@ export default function HomePage() {
 
       {/* CTA */}
       <section className="mx-auto max-w-6xl px-6 py-14">
-        <div className="rounded-3xl border bg-white p-8 shadow-sm">
+        <div className="rounded-3xl border border-ceraphina-border bg-white p-8 shadow-sm">
           <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
             <div>
-              <h3 className="text-2xl font-semibold tracking-tight">
+              <h3 className="text-2xl font-semibold tracking-tight text-ceraphina-cactus">
                 Want a starter kit for your first repot?
               </h3>
-              <p className="mt-2 text-neutral-600">
+              <p className="mt-2 text-ceraphina-muted">
                 We’ll help you choose a cactus, the right soil, and the perfect
                 top dress—easy, clean, and beginner-friendly.
               </p>
             </div>
             <div className="flex flex-wrap gap-3">
-              <Link
-                href="/contact"
-                className="rounded-xl bg-black px-5 py-3 text-sm font-medium text-white hover:opacity-90"
-              >
+              <Link href="/contact" className="btn-primary">
                 Contact us
               </Link>
-              <Link
-                href="/products"
-                className="rounded-xl border px-5 py-3 text-sm font-medium hover:bg-neutral-50"
-              >
+              <Link href="/products" className="btn-secondary">
                 Build a kit
               </Link>
             </div>
@@ -172,18 +158,20 @@ export default function HomePage() {
 
 function Stat({ label, value }: { label: string; value: string }) {
   return (
-    <div className="rounded-2xl border bg-white p-4">
-      <div className="text-sm text-neutral-500">{label}</div>
-      <div className="mt-1 text-lg font-semibold">{value}</div>
+    <div className="rounded-2xl border border-ceraphina-border bg-white p-4">
+      <div className="text-sm text-ceraphina-muted">{label}</div>
+      <div className="mt-1 text-lg font-semibold text-ceraphina-cactus">
+        {value}
+      </div>
     </div>
   );
 }
 
 function Item({ title, desc }: { title: string; desc: string }) {
   return (
-    <div className="rounded-2xl border p-4">
-      <div className="text-sm font-semibold">{title}</div>
-      <div className="mt-1 text-sm text-neutral-600">{desc}</div>
+    <div className="rounded-2xl border border-ceraphina-border bg-white p-4">
+      <div className="text-sm font-semibold text-ceraphina-cactus">{title}</div>
+      <div className="mt-1 text-sm text-ceraphina-muted">{desc}</div>
     </div>
   );
 }
@@ -200,14 +188,13 @@ function Card({
   cta: string;
 }) {
   return (
-    <div className="rounded-3xl border bg-white p-6 shadow-sm">
-      <div className="text-lg font-semibold tracking-tight">{title}</div>
-      <p className="mt-2 text-sm text-neutral-600">{desc}</p>
+    <div className="rounded-3xl border border-ceraphina-border bg-white p-6 shadow-sm">
+      <div className="text-lg font-semibold tracking-tight text-ceraphina-cactus">
+        {title}
+      </div>
+      <p className="mt-2 text-sm text-ceraphina-muted">{desc}</p>
       <div className="mt-5">
-        <Link
-          href={href}
-          className="inline-flex rounded-xl border px-4 py-2 text-sm font-medium hover:bg-neutral-50"
-        >
+        <Link href={href} className="btn-secondary">
           {cta}
         </Link>
       </div>

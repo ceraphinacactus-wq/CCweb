@@ -17,33 +17,33 @@ export const Navbar = () => {
   ];
 
   return (
-    <div className="w-full">
-      <nav className="container relative flex flex-wrap items-center justify-between p-8 mx-auto lg:justify-between xl:px-1">
+    <div className="w-full border-b border-ceraphina-border bg-white">
+      <nav className="container relative mx-auto flex flex-wrap items-center justify-between p-6 lg:justify-between xl:px-1">
         {/* Logo */}
-        <Link href="/" className="flex items-center space-x-2 text-2xl font-medium text-indigo-500 dark:text-gray-100">
-          <span>
-            <Image
-              src="/img/logo.png"
-              width={32}
-              height={32}
-              alt="Ceraphina Cactus"
-              className="w-8"
-              priority
-            />
+        <Link href="/" className="brand-link flex items-center gap-3">
+          <Image
+            src="/img/logo.png"
+            width={32}
+            height={32}
+            alt="Ceraphina Cactus"
+            className="w-8 h-8"
+            priority
+          />
+          <span className="text-lg font-semibold text-ceraphina-cactus">
+            Ceraphina Cactus
           </span>
-          <span>Ceraphina Cactus</span>
         </Link>
 
-        {/* Right side (theme + button) */}
-        <div className="gap-3 nav__item mr-2 lg:flex ml-auto lg:ml-0 lg:order-2">
+        {/* Right side */}
+        <div className="nav__item mr-2 ml-auto flex gap-3 lg:order-2 lg:ml-0">
           <ThemeChanger />
 
-          <div className="hidden mr-3 lg:flex nav__item">
+          <div className="nav__item hidden lg:flex">
             <a
               href={SQUARE_STORE_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-2 text-white bg-indigo-600 rounded-md md:ml-5"
+              className="btn-primary"
             >
               Shop (Square)
             </a>
@@ -56,10 +56,10 @@ export const Navbar = () => {
             <>
               <Disclosure.Button
                 aria-label="Toggle Menu"
-                className="px-2 py-1 text-gray-500 rounded-md lg:hidden hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:text-gray-300 dark:focus:bg-trueGray-700"
+                className="rounded-md px-2 py-1 text-ceraphina-cactus hover:text-ceraphina-purple focus:bg-ceraphina-accentGreenSoft focus:text-ceraphina-purple focus:outline-none lg:hidden"
               >
                 <svg
-                  className="w-6 h-6 fill-current"
+                  className="h-6 w-6 fill-current"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
                 >
@@ -78,13 +78,13 @@ export const Navbar = () => {
                 </svg>
               </Disclosure.Button>
 
-              <Disclosure.Panel className="flex flex-wrap w-full my-5 lg:hidden">
+              <Disclosure.Panel className="my-5 flex w-full flex-wrap rounded-2xl border border-ceraphina-border bg-ceraphina-surface p-3 lg:hidden">
                 <>
                   {navigation.map((item) => (
                     <Link
                       key={item.href}
                       href={item.href}
-                      className="w-full px-4 py-2 -ml-4 text-gray-500 rounded-md dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 dark:focus:bg-gray-800 focus:outline-none"
+                      className="w-full rounded-xl px-4 py-3 text-ceraphina-cactus transition hover:bg-ceraphina-accentGreenSoft hover:text-ceraphina-purple focus:bg-ceraphina-accentGreenSoft focus:text-ceraphina-purple focus:outline-none"
                     >
                       {item.label}
                     </Link>
@@ -94,7 +94,7 @@ export const Navbar = () => {
                     href={SQUARE_STORE_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full px-6 py-2 mt-3 text-center text-white bg-#2E6021 rounded-md"
+                    className="btn-primary mt-3 w-full text-center"
                   >
                     Shop (Square)
                   </a>
@@ -106,12 +106,12 @@ export const Navbar = () => {
 
         {/* Desktop menu */}
         <div className="hidden text-center lg:flex lg:items-center">
-          <ul className="items-center justify-end flex-1 pt-6 list-none lg:pt-0 lg:flex">
+          <ul className="flex flex-1 items-center justify-end pt-6 lg:pt-0">
             {navigation.map((item) => (
-              <li className="mr-3 nav__item" key={item.href}>
+              <li className="mr-2 nav__item" key={item.href}>
                 <Link
                   href={item.href}
-                  className="inline-block px-4 py-2 text-lg font-normal text-gray-800 no-underline rounded-md dark:text-gray-200 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-gray-800"
+                  className="inline-block rounded-xl px-4 py-2 text-base font-medium text-ceraphina-cactus no-underline transition hover:bg-ceraphina-accentGreenSoft hover:text-ceraphina-purple focus:bg-ceraphina-accentGreenSoft focus:text-ceraphina-purple focus:outline-none"
                 >
                   {item.label}
                 </Link>

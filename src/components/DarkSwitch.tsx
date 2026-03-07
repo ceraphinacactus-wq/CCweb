@@ -1,52 +1,59 @@
 "use client";
-import React, { useState, useEffect } from "react";
+
+import React, { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 
 const ThemeChanger = () => {
   const [mounted, setMounted] = useState(false);
-  const { theme, setTheme } = useTheme();
+  const { resolvedTheme, setTheme } = useTheme();
 
-  // When mounted on client, now we can show the UI
   useEffect(() => setMounted(true), []);
 
   if (!mounted) return null;
 
-  return (
-    <div className="flex items-center order-last ">
-      {theme === "dark" ? (
-        <button
-          onClick={() => setTheme("light")}
-          className="text-gray-300 rounded-full outline-none focus:outline-none ">
-          <span className="sr-only">Light Mode</span>
+  const isDark = resolvedTheme === "dark";
 
+  return (
+    <div className="flex items-center">
+      <button
+        type="button"
+        onClick={() => setTheme(isDark ? "light" : "dark")}
+        className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-ceraphina-border bg-white text-ceraphina-cactus transition hover:bg-ceraphina-accentGreenSoft hover:text-ceraphina-purple focus:outline-none focus:ring-2 focus:ring-ceraphina-accentGreen focus:ring-offset-2 dark:border-ceraphina-cactus dark:bg-neutral-900 dark:text-white dark:hover:bg-neutral-800"
+        aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
+        title={isDark ? "Light mode" : "Dark mode"}
+      >
+        {isDark ? (
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="w-5 h-5"
-            viewBox="0 0 20 20"
-            fill="currentColor">
-            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
-          </svg>
-        </button>
-      ) : (
-        <button
-          onClick={() => setTheme("dark")}
-          className="text-gray-500 rounded-full outline-none focus:outline-none focus-visible:ring focus-visible:ring-gray-100 focus:ring-opacity-20">
-          <span className="sr-only">Dark Mode</span>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
+            className="h-5 w-5"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
-            strokeWidth="1"
+            strokeWidth="1.8"
             strokeLinecap="round"
-            strokeLinejoin="round">
+            strokeLinejoin="round"
+          >
             <circle cx="12" cy="12" r="5" />
-            <path d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4" />
+            <path d="M12 1v2" />
+            <path d="M12 21v2" />
+            <path d="M4.22 4.22l1.42 1.42" />
+            <path d="M18.36 18.36l1.42 1.42" />
+            <path d="M1 12h2" />
+            <path d="M21 12h2" />
+            <path d="M4.22 19.78l1.42-1.42" />
+            <path d="M18.36 5.64l1.42-1.42" />
           </svg>
-        </button>
-      )}
+        ) : (
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-5 w-5"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path d="M21 12.79A9 9 0 0 1 11.21 3c0-.2.01-.39.02-.58A1 1 0 0 0 9.8 1.4a11 11 0 1 0 12.8 12.8 1 1 0 0 0-1.02-1.41c-.19.01-.38.02-.58.02Z" />
+          </svg>
+        )}
+      </button>
     </div>
   );
 };

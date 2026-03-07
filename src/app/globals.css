@@ -2,12 +2,98 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --background: #ffffff;
+  --foreground: #17331f;
 
+  --ceraphina-bg: #ffffff;
+  --ceraphina-surface: #f8faf8;
+  --ceraphina-text: #17331f;
+  --ceraphina-muted: #5f7466;
+  --ceraphina-border: #d7e6d9;
+
+  --ceraphina-cactus: #2f6b3d;
+  --ceraphina-cactus-dark: #214d2c;
+
+  --ceraphina-accent-green: #7dff72;
+  --ceraphina-accent-green-soft: #e8ffe5;
+
+  --ceraphina-purple: #7c3aed;
+  --ceraphina-purple-dark: #6d28d9;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--ceraphina-bg);
+  color: var(--ceraphina-text);
+  font-feature-settings: "rlig" 1, "calt" 1;
+}
 
 @layer base {
-  html,
-  body {
-    @apply dark:bg-trueGray-900;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-ceraphina-text;
+  }
+
+  p {
+    @apply text-ceraphina-muted;
+  }
+
+  a {
+    @apply transition-colors duration-200;
+  }
+
+  ::selection {
+    background: #e8ffe5;
+    color: #17331f;
   }
 }
 
+@layer components {
+  .page-shell {
+    @apply min-h-screen bg-ceraphina-bg text-ceraphina-text;
+  }
+
+  .section-card {
+    @apply rounded-2xl border border-ceraphina-border bg-ceraphina-surface p-6 shadow-sm;
+  }
+
+  .site-heading {
+    @apply text-4xl font-semibold tracking-tight text-ceraphina-text;
+  }
+
+  .site-subheading {
+    @apply text-lg text-ceraphina-muted;
+  }
+
+  .nav-link {
+    @apply text-ceraphina-cactus hover:text-ceraphina-purple;
+  }
+
+  .brand-link {
+    @apply font-semibold text-ceraphina-cactus hover:text-ceraphina-purple;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-xl bg-ceraphina-purple px-5 py-3 font-medium text-white transition-all duration-200 hover:bg-ceraphina-cactus hover:shadow-glow focus:outline-none focus:ring-2 focus:ring-ceraphina-accentGreen focus:ring-offset-2;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-xl border border-ceraphina-cactus bg-white px-5 py-3 font-medium text-ceraphina-cactus transition-all duration-200 hover:border-ceraphina-cactus hover:bg-ceraphina-accentGreenSoft hover:text-ceraphina-cactusDark focus:outline-none focus:ring-2 focus:ring-ceraphina-accentGreen focus:ring-offset-2;
+  }
+
+  .badge-accent {
+    @apply inline-flex items-center rounded-full bg-ceraphina-accentGreenSoft px-3 py-1 text-sm font-medium text-ceraphina-cactusDark;
+  }
+
+  .input-theme {
+    @apply w-full rounded-xl border border-ceraphina-border bg-white px-4 py-3 text-ceraphina-text outline-none transition focus:border-ceraphina-cactus focus:ring-2 focus:ring-ceraphina-accentGreen;
+  }
+}
