@@ -10,10 +10,11 @@ const SQUARE_STORE_URL = "https://ceraphina-cactus.square.site/";
 export const Navbar = () => {
   const navigation = [
     { label: "Home", href: "/" },
+    { label: "About", href: "/about" },
     { label: "Care Guide", href: "/care" },
-    { label: "Soil Blends", href: "/products" },
-    { label: "Markets", href: "/markets" },
-    { label: "Contact", href: "/contact" },
+    { label: "Products", href: "/products" },
+    { label: "Mission", href: "/mission" },
+    
   ];
 
   return (
