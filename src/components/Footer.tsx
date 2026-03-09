@@ -44,9 +44,13 @@ export function Footer() {
             </Link>
 
             <p className="mt-4 max-w-md text-sm text-ceraphina-muted">
-              Colorado Springs micro nursery focused on healthy columnar cacti,
-              mineral-forward soil blends, and beginner-friendly plant care.
+              Our mission at Ceraphina Cactus is to cultivate healthy, 
+              resilient cactus plants while promoting stewardship and,
+               creating positive living spaces.
             </p>
+            <p className="mt-4 text-3xl font-semibold tracking-tight text-[var(--ceraphina-cactus,#2f6b3d)]">
+            Growth Made Easy.
+          </p>
 
             <p className="mt-4 text-sm text-ceraphina-muted">
               Local pickup • Market events • Care guidance

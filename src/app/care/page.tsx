@@ -118,10 +118,10 @@ export default function Page() {
                 Ceraphina Cactus — Growth Made Easy
               </p>
               <p className="mt-4 text-ceraphina-muted">
-                Use this page as the web version of the printable guide. It
-                follows the same care topics, checklist flow, and bullet-style
-                information from the PDF.
-              </p>
+                At Ceraphina Cactus, we believe successful plant care should feel simple and approachable. 
+                This guide provides practical tips for growing columnar cacti in homes and outdoor spaces 
+                so growers of any experience level can care for their plants with confidence.
+                </p>
             </div>
 
             <div className="flex shrink-0 flex-col gap-3">
@@ -134,7 +134,7 @@ export default function Page() {
                 Open Printable PDF
               </a>
               <p className="text-sm text-ceraphina-muted">
-                Great for saving, printing, or sharing at markets.
+                Great for sharing and printing,.
               </p>
             </div>
           </div>

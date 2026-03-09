@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import ThemeChanger from "./DarkSwitch";
 import Image from "next/image";
 import { Disclosure } from "@headlessui/react";
 
@@ -37,7 +36,6 @@ export const Navbar = () => {
 
         {/* Right side */}
         <div className="nav__item mr-2 ml-auto flex gap-3 lg:order-2 lg:ml-0">
-          <ThemeChanger />
 
           <div className="nav__item hidden lg:flex">
             <a
@@ -46,7 +44,7 @@ export const Navbar = () => {
               rel="noopener noreferrer"
               className="btn-primary"
             >
-              Shop (Square)
+              Shop 
             </a>
           </div>
         </div>

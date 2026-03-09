@@ -1,91 +1,288 @@
-import PageShell from "@/components/PageShell";
+export default function Page() {
+  const ingredientRows = [
+     {
+      ingredient: "Pachanoi (San Pedro Cactus)",
+      physical:
+        "A hardy columnar cactus species well suited to fast-draining mineral soils and dry climates. Known for strong vertical growth and resilience in cultivation.",
+      metaphysical:
+        "Resilience, heart-centered awareness, protection, and connection to nature.",
+    },
+    {
+      ingredient: "Pumice",
+      physical:
+        "Improves drainage, helps prevent compaction, holds a small amount of moisture while maintaining airflow around roots.",
+      metaphysical: "Transformation, energy flow, renewal.",
+    },
+    {
+      ingredient: "Perlite (Soil Grade)",
+      physical:
+        "Increases aeration, keeps the mix loose, and improves root oxygenation in fast-draining cactus soil.",
+      metaphysical: "Lightness, clarity, openness.",
+    },
+    {
+      ingredient: "Cactus Soil",
+      physical:
+        "Provides an organic base that helps hold nutrients and supports beneficial microbial life.",
+      metaphysical: "Grounding connection to earth.",
+    },
+    {
+      ingredient: "Lava Rock",
+      physical:
+        "Adds structure, long-term drainage, and mineral stability to the blend.",
+      metaphysical: "Strength, grounding, stability.",
+    },
+    {
+      ingredient: "Biochar / Horticultural Charcoal",
+      physical:
+        "Helps hold nutrients, supports soil biology, and can absorb impurities in the mix.",
+      metaphysical: "Purification, energetic filtration.",
+    },
+    {
+      ingredient: "Worm Castings",
+      physical:
+        "Adds gentle natural nutrition, beneficial microbes, and improves soil structure.",
+      metaphysical: "Renewal, fertility, life cycles.",
+    },
+    {
+      ingredient: "Zeolite",
+      physical:
+        "Helps capture and slowly release nutrients while supporting soil balance.",
+      metaphysical: "Detoxification, energetic balance.",
+    },
+    {
+      ingredient: "Azomite",
+      physical:
+        "Provides trace minerals that support overall plant health and long-term vitality.",
+      metaphysical: "Ancient earth minerals, vitality.",
+    },
+    {
+      ingredient: "Oyster Shell",
+      physical:
+        "Adds calcium and helps support pH stability in the soil.",
+      metaphysical: "Protection, structural stability.",
+    },
+    {
+      ingredient: "Red Lava Rock",
+      physical:
+        "Long-lasting mineral top dress that improves drainage and finishes the soil surface cleanly.",
+      metaphysical: "Fire energy, vitality.",
+    },
+    {
+      ingredient: "Black Lava Rock",
+      physical:
+        "Adds durable mineral coverage, aeration, and surface protection for potted cactus.",
+      metaphysical: "Grounding, protective energy.",
+    },
+    {
+      ingredient: "Clear Quartz",
+      physical:
+        "Decorative mineral accent used in specialty top dress blends.",
+      metaphysical: "Energy amplification, clarity.",
+    },
+    {
+      ingredient: "Amethyst",
+      physical:
+        "Decorative mineral accent that adds visual interest to specialty top dress blends.",
+      metaphysical: "Calm, intuitive balance.",
+    },
+   
+  ];
 
-function Section({
-  title,
-  children,
-}: {
-  title: string;
-  children: React.ReactNode;
-}) {
+  const soilProducts = [
+    {
+      name: "Basic Cactus Soil",
+      price: "$12 / 8 qt",
+      description:
+        "A balanced everyday cactus mix made for reliable drainage and healthy root growth.",
+      ingredients: ["Cactus soil", "Perlite (soil grade)", "Pumice", "Worm castings"],
+    },
+    {
+      name: "Premium Mineral Cactus Soil",
+      price: "$16 / 8 qt",
+      description:
+        "A mineral-rich blend designed for stronger root aeration and long-term soil stability.",
+      ingredients: [
+        "Pumice",
+        "Perlite (soil grade)",
+        "Cactus soil",
+        "Lava rock",
+        "Biochar",
+        "Worm castings",
+        "Oyster shell",
+      ],
+    },
+    {
+      name: "Elite Mineral Cactus Mix",
+      price: "$20 / 8 qt",
+      description:
+        "Collector-grade cactus soil with enhanced mineral diversity and beneficial soil biology.",
+      ingredients: [
+        "Pumice",
+        "Perlite (soil grade)",
+        "Cactus soil",
+        "Lava rock",
+        "Biochar",
+        "Worm castings",
+        "Zeolite",
+        "Azomite",
+        "Oyster shell",
+        "Mycorrhizal inoculant",
+      ],
+    },
+  ];
+
+  const topDressProducts = [
+    {
+      name: "High Country Cactus Top Dress",
+      price: "$8 / 1 qt",
+      ingredients: ["Pumice", "Perlite", "Lava rock", "Biochar"],
+    },
+    {
+      name: "Desert Mineral Cactus Top Dress",
+      price: "$10 / 1 qt",
+      ingredients: ["Red lava rock", "Black lava rock", "Pumice", "Biochar", "Perlite"],
+    },
+    {
+      name: "Sacred Energy Top Dress",
+      price: "$15 / 1 qt",
+      ingredients: ["Black lava rock", "Pumice", "Biochar", "Clear quartz", "Amethyst"],
+    },
+  ];
+
   return (
-    <section className="rounded-3xl border border-[var(--ceraphina-border,#d7e6d9)] bg-white p-6 shadow-sm md:p-8">
-      <h2 className="text-2xl font-semibold text-[var(--ceraphina-cactus,#2f6b3d)]">
-        {title}
-      </h2>
-      <div className="mt-4 space-y-4 text-base leading-7 text-[var(--ceraphina-text,#17331f)]">
-        {children}
-      </div>
-    </section>
-  );
-}
+    <main className="bg-white text-neutral-900">
+       <section className="mx-auto max-w-7xl px-6 py-14 md:px-8 lg:px-10">
+        <div className="max-w-2xl">
+          <h2 className="text-3xl font-semibold tracking-tight text-neutral-950">
+            Soil Blends
+          </h2>
+          <p className="mt-4 text-base leading-7 text-neutral-700">
+            Each soil blend is designed to support ornamental cactus with a different level of
+            mineral structure, nutrition, and long-term performance.
+          </p>
+        </div>
 
-export default function CareGuidePage() {
-  return (
-    <PageShell
-      eyebrow="Care Guide"
-      title="Simple care for healthy, resilient columnar cacti."
-      intro="Our care approach is built around bright light, mineral-rich drainage, and consistency. The goal is healthy roots, steady growth, and making growth easy."
-    >
-      <Section title="Columnar Cactus Varieties">
-        <ul className="space-y-3">
-          <li>
-            <strong>Pachanoi (San Pedro)</strong> — known for fast growth and a
-            classic columnar look.
-          </li>
-          <li>
-            <strong>Bridgesii (Bolivian Torch)</strong> — often recognized for
-            its upright growth and stronger spination.
-          </li>
-          <li>
-            <strong>Peruvianus (Peruvian Torch)</strong> — admired for its
-            blue-green tones and striking form.
-          </li>
-        </ul>
-        <p>
-          These varieties share similar needs and generally thrive in bright
-          light, fast-draining soil, and a careful watering rhythm.
-        </p>
-      </Section>
+        <div className="mt-8 grid gap-6 lg:grid-cols-3">
+          {soilProducts.map((product) => (
+            <article
+              key={product.name}
+              className="rounded-3xl border border-neutral-200 bg-white p-6 shadow-sm"
+            >
+              <div className="flex items-start justify-between gap-4">
+                <h3 className="text-xl font-semibold text-neutral-950">{product.name}</h3>
+                <span className="rounded-full bg-fuchsia-700 px-3 py-1 text-sm font-semibold text-white">
+                  {product.price}
+                </span>
+              </div>
+              <p className="mt-4 text-sm leading-7 text-neutral-700">{product.description}</p>
+              <div className="mt-5">
+                <p className="text-sm font-semibold uppercase tracking-wide text-green-800">
+                  Ingredients
+                </p>
+                <ul className="mt-3 space-y-2 text-sm text-neutral-700">
+                  {product.ingredients.map((ingredient) => (
+                    <li key={ingredient} className="flex gap-2">
+                      <span className="mt-1 h-2 w-2 rounded-full bg-green-700" />
+                      <span>{ingredient}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
 
-      <Section title="The Ceraphina Philosophy">
-        <p>
-          We believe plants are living energetic beings that contribute to the
-          feeling of a space. Healthy cacti bring structure, calm, beauty, and
-          intention to homes, patios, studios, and gardens.
-        </p>
-        <ul className="space-y-3">
-          <li>Healthy plants help create a positive and calming atmosphere.</li>
-          <li>Columnar cacti are often associated with clearing stagnant energy.</li>
-          <li>Plants contribute both physically and energetically to a room.</li>
-          <li>Intentional plant care helps create sacred and grounded spaces.</li>
-        </ul>
-      </Section>
+      <section className="mx-auto max-w-7xl px-6 pb-16 md:px-8 lg:px-10">
+        <div className="max-w-2xl">
+          <h2 className="text-3xl font-semibold tracking-tight text-neutral-950">
+            Mineral Top Dress Collection
+          </h2>
+          <p className="mt-4 text-base leading-7 text-neutral-700">
+            Top dress helps protect the soil surface, improves drainage at the crown, and gives
+            each cactus container a clean finished look.
+          </p>
+        </div>
 
-      <Section title="Core Care Basics">
-        <div className="grid gap-5 md:grid-cols-3">
-          <div className="rounded-2xl bg-[var(--ceraphina-surface,#f8faf8)] p-5">
-            <h3 className="text-lg font-semibold">Light</h3>
-            <p className="mt-2 text-sm leading-6 text-[var(--ceraphina-muted,#5f7466)]">
-              Give your cactus bright light daily. Outdoors, acclimate slowly
-              to stronger sun. Indoors, use the brightest window available.
-            </p>
-          </div>
-          <div className="rounded-2xl bg-[var(--ceraphina-surface,#f8faf8)] p-5">
-            <h3 className="text-lg font-semibold">Water</h3>
-            <p className="mt-2 text-sm leading-6 text-[var(--ceraphina-muted,#5f7466)]">
-              Let the soil dry fully between waterings. Water deeply, then wait
-              until the mix is dry again before watering.
-            </p>
-          </div>
-          <div className="rounded-2xl bg-[var(--ceraphina-surface,#f8faf8)] p-5">
-            <h3 className="text-lg font-semibold">Soil</h3>
-            <p className="mt-2 text-sm leading-6 text-[var(--ceraphina-muted,#5f7466)]">
-              Use a fast-draining mineral mix with ingredients like pumice,
-              perlite, lava rock, and cactus soil.
-            </p>
+        <div className="mt-8 grid gap-6 lg:grid-cols-3">
+          {topDressProducts.map((product) => (
+            <article
+              key={product.name}
+              className="rounded-3xl border border-neutral-200 bg-green-50/40 p-6 shadow-sm"
+            >
+              <div className="flex items-start justify-between gap-4">
+                <h3 className="text-xl font-semibold text-neutral-950">{product.name}</h3>
+                <span className="rounded-full bg-fuchsia-700 px-3 py-1 text-sm font-semibold text-white">
+                  {product.price}
+                </span>
+              </div>
+              <div className="mt-5">
+                <p className="text-sm font-semibold uppercase tracking-wide text-green-800">
+                  Ingredients
+                </p>
+                <ul className="mt-3 space-y-2 text-sm text-neutral-700">
+                  {product.ingredients.map((ingredient) => (
+                    <li key={ingredient} className="flex gap-2">
+                      <span className="mt-1 h-2 w-2 rounded-full bg-green-700" />
+                      <span>{ingredient}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+      <section className="mx-auto max-w-7xl px-6 py-14 md:px-8 lg:px-10">
+        <div className="max-w-3xl">
+          <p className="text-sm font-semibold uppercase tracking-[0.22em] text-fuchsia-700">
+            Active Cactus Soil Blends
+          </p>
+          <h1 className="mt-4 text-4xl font-semibold tracking-tight text-neutral-950 md:text-5xl">
+            Soil Blends & Ingredient Benefits
+          </h1>
+          <p className="mt-5 text-lg leading-8 text-neutral-700">
+            Healthy cactus begin with the right soil. Our blends combine mineral drainage,
+            natural nutrients, and earth-derived materials that support strong root
+            development while honoring the natural symbolism of stone, earth, renewal, and
+            balance.
+          </p>
+          <div className="mt-6 inline-flex rounded-2xl border border-green-200 bg-green-50 px-4 py-3 text-sm text-green-900">
+            “Stone erodes, but cactus grows.”
           </div>
         </div>
-      </Section>
-    </PageShell>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-6 pb-8 md:px-8 lg:px-10">
+        <div className="overflow-hidden rounded-3xl border border-neutral-200 shadow-sm">
+          <div className="grid grid-cols-1 bg-neutral-50 text-sm font-semibold text-neutral-800 md:grid-cols-[1.1fr_1.5fr_1.2fr]">
+            <div className="border-b border-neutral-200 px-5 py-4 md:border-b-0 md:border-r">Ingredient</div>
+            <div className="border-b border-neutral-200 px-5 py-4 md:border-b-0 md:border-r">Physical Benefits</div>
+            <div className="px-5 py-4">Metaphysical Benefits</div>
+          </div>
+
+          {ingredientRows.map((row, index) => (
+            <div
+              key={row.ingredient}
+              className={`grid grid-cols-1 md:grid-cols-[1.1fr_1.5fr_1.2fr] ${
+                index !== ingredientRows.length - 1 ? "border-t border-neutral-200" : ""
+              }`}
+            >
+              <div className="px-5 py-5 font-medium text-neutral-950 md:border-r md:border-neutral-200">
+                {row.ingredient}
+              </div>
+              <div className="px-5 pb-2 text-neutral-700 md:border-r md:border-neutral-200 md:py-5">
+                {row.physical}
+              </div>
+              <div className="px-5 pb-5 text-neutral-700 md:py-5">
+                {row.metaphysical}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+     
+    </main>
   );
 }

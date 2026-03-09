@@ -1,11 +1,17 @@
 // app/page.tsx
 import Link from "next/link";
+import HomeCarousel from "@/components/homecarousel";
+
+const SQUARE_STORE_URL = "https://ceraphina-cactus.square.site/";
 
 export default function HomePage() {
   return (
     <main className="min-h-screen bg-white text-ceraphina-text">
       {/* HERO */}
+      
+      
       <section className="mx-auto max-w-6xl px-6 pb-10 pt-14 sm:pt-20">
+        <HomeCarousel />
         <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
           <div>
             <p className="inline-flex items-center rounded-full border border-ceraphina-border bg-ceraphina-accentGreenSoft px-3 py-1 text-sm text-ceraphina-cactus">
@@ -101,27 +107,28 @@ export default function HomePage() {
       {/* QUICK LINKS */}
       <section className="border-t border-ceraphina-border bg-ceraphina-surface">
         <div className="mx-auto max-w-6xl px-6 py-12">
-          <h2 className="text-xl font-semibold tracking-tight text-ceraphina-cactus">
-            Start here
-          </h2>
+         
 
           <div className="mt-6 grid gap-4 md:grid-cols-3">
             <Card
               title="Care Guide"
-              desc="Our simple SoCo care basics—light, water, soil, and seasonal tips."
+              desc="The Ceraphina Cactus care guide provides practical tips for growing columnar cacti in homes and outdoor spaces 
+                so growers of any experience level can care for their plants with confidence."
               href="/care"
               cta="Open guide"
             />
             <Card
               title="Products"
-              desc="Active Cactus Soil Blends + top dress options for repotting and finishing."
+              desc="Active Cactus Soil Blends and mineral top dress options provide the balanced foundation columnar cacti need for healthy roots, proper drainage, and strong growth."
               href="/products"
               cta="View products"
             />
             <Card
-              title="Markets"
-              desc="Find us locally—dates, locations, and what we’re bringing."
-              href="/markets"
+              title="Mission"
+              desc=" Our mission at Ceraphina Cactus is to cultivate healthy, resilient
+          cactus plants while promoting stewardship, creating positive living
+          spaces, and making growth easy."
+              href="/mission"
               cta="See schedule"
             />
           </div>
@@ -142,11 +149,11 @@ export default function HomePage() {
               </p>
             </div>
             <div className="flex flex-wrap gap-3">
-              <Link href="/contact" className="btn-primary">
-                Contact us
+              <Link href="/products" className="btn-primary">
+                View Products
               </Link>
-              <Link href="/products" className="btn-secondary">
-                Build a kit
+              <Link href={SQUARE_STORE_URL} className="btn-secondary">
+                Shop Products 
               </Link>
             </div>
           </div>
