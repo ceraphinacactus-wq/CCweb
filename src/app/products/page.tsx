@@ -95,6 +95,7 @@ export default function Page() {
       description:
         "A balanced everyday cactus mix made for reliable drainage and healthy root growth.",
       ingredients: ["Cactus soil", "Perlite (soil grade)", "Pumice", "Worm castings"],
+      squareLink: "https://ceraphina-cactus.square.site/product/basic-soil-blend-8-quart/KK7IINWR7GRZP2ZZ673ZFRZP?cp=true&sa=true&sbp=false&q=false"
     },
     {
       name: "Premium Mineral Cactus Soil",
@@ -188,9 +189,20 @@ export default function Page() {
                   ))}
                 </ul>
               </div>
+              <div className="mt-6">
+  <a
+    href={product.squareLink}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="block w-full text-center bg-green-700 hover:bg-green-800 text-white font-semibold py-3 px-5 rounded-xl transition duration-200 shadow-md hover:shadow-lg"
+  >
+    Buy Now
+  </a>
+</div>
             </article>
           ))}
         </div>
+        
       </section>
 
       <section className="mx-auto max-w-7xl px-6 pb-16 md:px-8 lg:px-10">
